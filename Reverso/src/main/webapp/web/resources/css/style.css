@@ -1,0 +1,257 @@
+
+h2{
+linear-gradient(45deg, blue, red);
+
+}
+.center {
+    text-align: center;
+}
+
+/* Style des boutons */
+.button {
+    display: inline-block;
+    max-width: 20%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* Ajout d'un espacement entre les boutons */
+}
+
+html {
+    background: linear-gradient(180deg, #934DD9, #C5C5D2 50%); !important;
+    background-color: #934DD9; !important;
+
+}
+
+
+
+.form-cnx {
+    width: 300px; /* Largeur du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    padding: 20px; /* Espacement intérieur du formulaire */
+    border: 1px solid #ccc; /* Bordure du formulaire */
+    border-radius: 5px; /* Coins arrondis */
+}
+.form-example {
+    margin-bottom: 15px; /* Espacement entre les éléments du formulaire */
+}
+.form-example label {
+    display: flex;
+    width: 100px; /* Largeur de l'étiquette */
+    text-align: right; /* Alignement du texte à droite */
+    margin-right: 10px; /* Espacement à droite de l'étiquette */
+}
+.form-example input {
+    width: 200px; /* Largeur des champs de saisie */
+}
+.form-example input[type="button"] {
+    width: auto; /* Rétablir la largeur automatique pour le bouton */
+}
+
+.logo IMG{
+    max-width: 5%;
+    width: 15px;
+    border-radius: 80%
+}
+
+.header {
+    display: flex;
+    background-color: #007bff;
+    justify-content: space-between; /* Distribue l'espace entre les éléments */
+    align-items: center; /* Alignement vertical */
+    padding: 10px; /* Ajouter un peu d'espacement si nécessaire */
+}
+
+
+
+
+body {
+
+    min-height: 100vh;
+
+}
+
+
+.container {
+
+    flex-wrap: wrap; /* Permet l'enroulement des éléments */
+
+}
+
+.box {
+    flex: 1 0 60%; /* Permet aux boîtes de prendre 45% de la largeur de la page */
+    background-color: #f0f0f0; /* Couleur de fond de la boîte */
+    padding: 20px; /* Espacement intérieur de la boîte */
+    border-radius: 5px; /* Bord arrondi de la boîte */
+    margin: 0 100px 100px 0; /* Espacement entre les boîtes */
+    box-sizing: border-box; /* Inclut la bordure et le rembourrage dans la largeur/la hauteur */
+
+}
+
+.title {
+    font-size: 18px; /* Taille de la police du titre */
+    margin: 0; /* Supprimer les marges par défaut du paragraphe */
+}
+
+
+
+
+
+.form-cnx {
+    width: 300px; /* Largeur du formulaire */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cnx {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #934DD9;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+footer{
+    background-color:#C0B4E3;
+    padding:9px ;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.form-creation {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 50px;
+}
+
+.form-group {
+    flex: 1 1 100%; /* Les éléments prennent 100% de la largeur */
+
+
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Utilisation de la hauteur de la vue pour centrer verticalement */
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto; /* Centre le tableau horizontalement */
+}
+
+th, td {
+    border: 1px solid black; /* Ajoute une bordure de 1 pixel solide noire */
+    padding: 8px; /* Ajoute un espacement intérieur aux cellules */
+}
+
+
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+form ul {
+    list-style-type: none;
+    padding: 0;
+}
+form ul li {
+    display: inline-block;
+    margin-right: 20px; /* Espace entre les éléments */
+}
+/* Style pour réduire la taille du bouton */
+input[type="submit"] {
+    padding: 5px 10px; /* Ajustez la taille selon vos besoins */
+    font-size: 14px; /* Ajustez la taille de la police selon vos besoins */
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+
+    background-color: #934DD9;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .form-creation {
+        margin-left: 0; /* Supprimer la marge à gauche */
+    }
+    .form-group {
+
+
+        flex: 1 1 calc(50% - 10px); /* Les éléments prennent 50% de la largeur avec un espacement entre eux */
+    }
+    .container {
+        flex-direction: column; /* Disposer les boîtes en colonne sur les écrans plus petits */
+    }
+    .box {
+        flex: 1 0 100%; /* Permet aux boîtes de prendre 100% de la largeur de la page */
+        margin: 0 0 10px 0; /* Espacement entre les boîtes */
+    }
+    .column {
+        flex-basis: 100%; /* Changer la base flex à 100% pour que les colonnes empilées les unes sur les autres */
+    }
+}
