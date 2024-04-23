@@ -28,7 +28,7 @@ public class ChoixServlet extends HttpServlet {
             } else if (gestionDeProspect != null) {
                 // Rediriger vers la page prospect.jsp si "Gestion de prospect" est sélectionné
 
-                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/formulairePro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/accueilprospect.jsp");
                 dispatcher.forward(request, response);
             } else {
                 // Aucun choix n'a été sélectionné, vérifier s'il s'agit d'une tentative de connexion

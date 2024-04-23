@@ -222,6 +222,7 @@ public static void create(Prospect p) throws Exception {
             while (rs.next()) {
                 int id_prospect = rs.getInt("id_prospect");
 
+
                 String Num_rue = rs.getString("Num_rue");
                 String Nom_rue = rs.getString("Nom_rue");
                 String Code_postal = rs.getString("code_postal");

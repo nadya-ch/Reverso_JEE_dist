@@ -35,21 +35,22 @@
     </thead>
     <tbody>
     <!-- Vous pouvez utiliser les balises JSTL pour itérer sur la liste des clients -->
-    <c:forEach var="client" items="${Clients}">
+    <c:forEach var="prospect" items="${listprosp}">
         <tr>
-            <th scope="row"><c:out value="${client.getIdentifiant()}" /></th>
-            <td><c:out value="${client.getRaison_sociale()}" /></td>
-            <td><c:out value="${client.getNum_rue()}" /></td>
-            <td><c:out value="${client.getNom_rue()}" /></td>
-            <td><c:out value="${client.getVille()}" /></td>
-            <td><c:out value="${client.getCode_postal()}" /></td>
-            <td><c:out value="${client.getTel()}" /></td>
-            <td><c:out value="${client.getEmail()}" /></td>
-            <td><c:out value="${client.getChiffre_affaires()}" /></td>
-            <td><c:out value="${client.getNb_employes()}" /></td>
-            <td><a href="ModifierServlet?id=<c:out value='${client.getRaison_sociale()}' />">Modifier</a>
+            <th scope="row"><c:out value="${prospect.getIdentifiant()}" /></th>
+            <td><c:out value="${prospect.getRaison_sociale()}" /></td>
+            <td><c:out value="${prospect.getNum_rue()}" /></td>
+            <td><c:out value="${prospect.getNom_rue()}" /></td>
+            <td><c:out value="${prospect.getVille()}" /></td>
+            <td><c:out value="${prospect.getCode_postal()}" /></td>
+            <td><c:out value="${prospect.getTel()}" /></td>
+            <td><c:out value="${prospect.getEmail()}" /></td>
+            <td><c:out value="${prospect.getDate_prospection()}" /></td>
+            <td><c:out value="${client.getProspect_interesse()}" /></td>
+
+            <td><a href="edit?id=<c:out value='${prospect.getRaison_sociale()}' />">Modifier</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="SuppServlet?id=<c:out value='${client.getRaison_sociale()}' />">Supprimer</a></td>
+                <a href="delete?id=<c:out value='${prospect.getRaison_sociale()}' />">Supprimer</a></td>
         </tr>
     </c:forEach>
     <!-- } -->
