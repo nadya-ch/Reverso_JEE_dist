@@ -12,7 +12,7 @@
 <div class="center">
     <h1>Gestion de client</h1>
     <!-- Boutons transformés -->
-    <a href="CreationServlet" class="button">Ajouter un client</a>
+    <a href="LoginServlet<%--CreationServlet--%>" class="button">Ajouter un client</a>
     <a href="AffichageServlet" class="button">Afficher les client </a>
 
 

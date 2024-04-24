@@ -1,6 +1,7 @@
 import MetierException.MetierException;
 import Model.Dao.DaoClient;
 import Model.metier.Client;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,7 +19,7 @@ public class update extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
             int identifiant = Integer.parseInt(request.getParameter("id"));
             String raison_sociale = request.getParameter("Raison_Sociale");
@@ -38,9 +39,13 @@ public class update extends HttpServlet {
             client = new Client(identifiant, raison_sociale,num_rue,nom_rue,code_postal,ville,tel,mail,commentaire,chiffre_affaires,nb_employes);
 
             DaoClient.update(client);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/confirmation.jsp");
+            dispatcher.forward(request, response);
+
         } catch (Exception e) {
-            throw new RuntimeException(e);
+               request.setAttribute("errorMessage", e.getMessage());
+                RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/error.jsp");
+                dispatcher.forward(request, response);
+
         }
-        response.sendRedirect("list");
-        }
-}
+}}

@@ -37,7 +37,7 @@ public class Prospect  extends Societe {
 
         public void setProspect_interesse(String prospect_interesse) throws MetierException {
             if (prospect_interesse==null||prospect_interesse.isEmpty()){
-                throw new MetierException("entrer un reponse");
+                throw new MetierException("entrer une reponse");
             }
             this.prospect_interesse = prospect_interesse;
         }

@@ -25,7 +25,7 @@ public class CreationServlet extends HttpServlet {
         daoClient = new DaoClient(); // Exemple de création de l'objet DaoClient
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    /*    // Vérifier si l'utilisateur est connecté
+        // Vérifier si l'utilisateur est connecté
         HttpSession session = request.getSession(false); // Ne crée pas de nouvelle session s'il n'en existe pas
         if (session == null || session.getAttribute("utilisateur") == null) {
             // L'utilisateur n'est pas connecté, rediriger vers la page de connexion
@@ -35,7 +35,7 @@ public class CreationServlet extends HttpServlet {
             // L'utilisateur est connecté, afficher la page pour ajouter un client
             RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/Modification.jsp");
             dispatcher.forward(request, response);
-        }*/
+        }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/Creation.jsp");
         dispatcher.forward(request, response);

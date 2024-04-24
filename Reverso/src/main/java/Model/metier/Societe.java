@@ -46,7 +46,7 @@ public abstract class Societe {
             throw new MetierException("entrez la raison sociale");
         }
         this.raison_sociale = raison_sociale;
-        System.out.println("1 \n");
+
     }
 
     public void setNum_rue(String num_rue) throws MetierException {
@@ -54,7 +54,7 @@ public abstract class Societe {
             throw new MetierException("entrez un num de rue");
         }
         this.num_rue = num_rue;
-        System.out.println("2 \n");
+
     }
 
     public void setNom_rue(String nom_rue) throws MetierException {
@@ -62,14 +62,14 @@ public abstract class Societe {
             throw new MetierException("entrez un nom");
         }
         this.nom_rue = nom_rue;
-        System.out.println("3 \n");
+
     }
     public void setCode_postal(String code_postal) throws MetierException {
         if (code_postal==null||code_postal.isEmpty()){
             throw new MetierException("entrez un code");
         }
         this.code_postal = code_postal;
-        System.out.println("4 \n");
+
     }
 
     public void setVille(String ville) throws MetierException {
@@ -77,7 +77,7 @@ public abstract class Societe {
             throw new MetierException("entrez une ville");
         }
         this.ville = ville;
-        System.out.println("5 \n");
+
     }
 
     public void setTel(String tel) throws MetierException {
@@ -88,7 +88,7 @@ public abstract class Societe {
             throw new MetierException("le num de tel est invalide");
         }
         this.tel = tel;
-        System.out.println("6 \n");
+
     }
 
     public void setEmail(String email) throws MetierException{
@@ -99,12 +99,12 @@ public abstract class Societe {
             throw new MetierException("format email incorrect");
         }
         this.email = email;
-        System.out.println("7 \n");
+
     }
 
     public void setCommentaire(String commentaire) {
         this.commentaire = commentaire;
-        System.out.println("8 \n");
+
     }
 
 

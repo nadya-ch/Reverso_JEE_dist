@@ -24,9 +24,7 @@
 </center>
 <div align="center">
     <form action="${prospect != null ? 'update' : 'insert'}" method="post">
-        <c:if test="${prospect == null}">
-        <form action="insert" method="post">
-            </c:if>
+
             <table border="1" cellpadding="5">
                 <caption>
                     <h2>
@@ -114,7 +112,7 @@
                 <tr>
                     <th>commentaire </th>
                     <td>
-                        <input type="text" name="Commentaire"
+                        <input type="text" name="commentaire"
                                value="<c:out value='${prospect.commentaire}' />"
                         />
                     </td>
@@ -122,9 +120,10 @@
 
                 <tr>
                     <td colspan="2" align="center">
-                        <input type="submit" value="Save" />
+                        <input type="submit"  value="Save" />
                     </td>
                 </tr>
+
             </table>
         </form>
 </div>

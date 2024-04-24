@@ -14,8 +14,12 @@
     </div>
 
 
+
     <div class="logo">
-        <%--<a href="connexion.html">Se connecter</a>--%>
-        <img src="images/cnx.png" alt="logo connexion"></div>
+        <%-- Rediriger vers la servlet de connexion lorsque le lien est cliqué --%>
+        <a href="Login">Connexion</a>
+        <!-- Utilisation de request.getContextPath() pour obtenir le chemin de contexte de l'application -->
+        <!-- Assurez-vous que "/servletlogin" correspond à l'URL de votre servlet de connexion -->
+    </div>
 
 </header>
