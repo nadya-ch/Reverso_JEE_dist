@@ -57,6 +57,10 @@ html {
     width: 15px;
     border-radius: 80%
 }
+h2{
+    font-size: xx-large;
+    color: #934DD9;
+}
 
 .header {
     display: flex;

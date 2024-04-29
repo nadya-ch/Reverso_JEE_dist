@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="center">
-    <h1>Gestion de client</h1>
+    <h1>Gestion de Prospect</h1>
     <!-- Boutons transformés -->
     <a href="neww" class="button">Ajouter un prospect</a>
     <a href="list" class="button">Afficher les prospects </a>

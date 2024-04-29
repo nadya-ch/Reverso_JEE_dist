@@ -55,12 +55,13 @@ public class ProspectServlet extends HttpServlet {
                     break;
                 case "/update":
                     updateProspect(request, response);
+                    break;
                 case "/list":
                     listProspect(request, response);
                     break;
-                default:
+            /*    default:
                     Login(request, response);
-                    break;
+                    break;*/
             }
         } catch (MetierException me) {
             request.setAttribute("errorMessage", me.getMessage());
@@ -92,7 +93,8 @@ public class ProspectServlet extends HttpServlet {
     }
 
 
-    private void updateProspect(HttpServletRequest request, HttpServletResponse response) {
+    private void updateProspect(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id= Integer.parseInt(request.getParameter("identifiant"));
         String raison_sociale = request.getParameter("raison_sociale");
         String Num_rue = request.getParameter("num_rue");
         String Nom_rue = request.getParameter("nom_rue");
@@ -103,29 +105,30 @@ public class ProspectServlet extends HttpServlet {
            /* DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-mm-yyyy");
             LocalDate Date_prospection = LocalDate.parse(request.getParameter("Date_prospection"),df);*/
 
-        // LocalDate Date_prospection = LocalDate.parse(request.getParameter("Date_prospection"));
-        String Prospect_interesse = request.getParameter("Prospect_interesse");
-        String Commentaire = request.getParameter("commentaire");
+    // LocalDate Date_prospection = LocalDate.parse(request.getParameter("Date_prospection"));
+    String Prospect_interesse = request.getParameter("prospect_interesse");
+    String Commentaire = request.getParameter("commentaire");
 
         try {
-            Prospect prospect = new Prospect(0, raison_sociale, Num_rue, Nom_rue, Code_postal, Ville, Tel,
-                    Email, Commentaire, LocalDate.of(2020, 2, 5), Prospect_interesse);
-            daoProspect.update(prospect);
+        Prospect prospect = new Prospect(id, raison_sociale, Num_rue, Nom_rue, Code_postal, Ville, Tel,
+                Email, Commentaire, LocalDate.of(2020, 2, 5), Prospect_interesse);
+        DaoProspect.update(prospect);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/confirmation.jsp");
-            dispatcher.forward(request, response);
-        } catch (Exception e) {
-            // Gérer les erreurs
+        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/confirmation.jsp");
+        dispatcher.forward(request, response);
+    } catch (Exception e) {
+        // Gérer les erreurs
 
-            // Rediriger l'utilisateur vers une page d'erreur ou afficher un message d'erreur
-         /*   request.setAttribute("errorMessage", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/error.jsp");
-            dispatcher.forward(request, response);*/
-            throw new RuntimeException(e);
-        }
-
+        // Rediriger l'utilisateur vers une page d'erreur ou afficher un message d'erreur
+        request.setAttribute("errorMessage", e.getMessage());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/error.jsp");
+        dispatcher.forward(request, response);
 
     }
+
+
+
+}
 
     private void insertProspect(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -162,11 +165,11 @@ public class ProspectServlet extends HttpServlet {
             dispatcher.forward(request, response);
 
         } catch (Exception e) {
-               /* request.setAttribute("errorMessage", e.getMessage());
+                request.setAttribute("errorMessage", e.getMessage());
                 RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/JSP/error.jsp");
-                dispatcher.forward(request, response);*/
+                dispatcher.forward(request, response);
 
-            throw new RuntimeException(e);
+
 
 
             // Redirection vers la page de confirmation

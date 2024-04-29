@@ -24,6 +24,7 @@ import java.io.IOException;
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             // Récupérer les paramètres du formulaire
 
+
                 // Récupérer les paramètres du formulaire
                 String raison_sociale = request.getParameter("raison_sociale");
                 String Num_rue = request.getParameter("num_rue");
@@ -38,7 +39,7 @@ import java.io.IOException;
 
                 try {
                     // Créer un objet Client avec les données récupérées
-                    Client client = new Client(0, raison_sociale, Num_rue, Nom_rue, Code_postal, Ville, Tel, Email, Commentaire, Chiffre_affaires,
+                    Client client = new Client(2000, raison_sociale, Num_rue, Nom_rue, Code_postal, Ville, Tel, Email, Commentaire, Chiffre_affaires,
                             nb_employes);
 
                     // Appeler la méthode update du DAO pour mettre à jour le client

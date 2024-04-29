@@ -1,3 +1,4 @@
+<jsp:useBean id="prospect" scope="request" type="Model.metier.Prospect"/>
 <%--
   Created by IntelliJ IDEA.
   User: CDA09
@@ -18,7 +19,7 @@
 <center>
     <h1>Reverso </h1>
     <h2>
-                <a href="list">Afficher les prospects </a>
+     <a href="list">Afficher les prospects </a>
 
     </h2>
 </center>
@@ -37,8 +38,19 @@
                     </h2>
                 </caption>
                 <c:if test="${prospect != null}">
-                    <input type="hidden" name="id" value="<c:out value='${Prospect.raison_sociale}' />" />
+                    <input type="hidden" name="id" value="<c:out value='${prospect.identifiant}' />" />
                 </c:if>
+
+                <tr>
+                    <th>identifiant </th>
+                    <td>
+                        <input type="text" name="identifiant"
+                               value="${prospect.identifiant}"
+                        />
+                    </td>
+                </tr>
+
+
                 <tr>
                     <th>raison_sociale </th>
                     <td>
@@ -104,8 +116,7 @@
                   <tr>
                     <th>prospect_interesse </th>
                     <td>
-                        <input type="text" name="prospect_interesse"
-                               value="<c:out value='${prospect.prospect_interesse}' />"
+                        <input type="text" name="prospect_interesse" value="<c:out value='${prospect.prospect_interesse}' />"
                         />
                     </td>
                 </tr>

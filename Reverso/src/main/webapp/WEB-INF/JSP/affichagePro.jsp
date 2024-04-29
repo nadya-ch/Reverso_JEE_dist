@@ -12,7 +12,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title id="connexion">Reverso - Connexion</title>
+    <title id="connexion"> Connexion</title>
 </head>
 <body>
 
@@ -46,7 +46,7 @@
             <td><c:out value="${prospect.getTel()}" /></td>
             <td><c:out value="${prospect.getEmail()}" /></td>
             <td><c:out value="${prospect.getDate_prospection()}" /></td>
-            <td><c:out value="${client.getProspect_interesse()}" /></td>
+            <td><c:out value="${prospect.getProspect_interesse()}" /></td>
 
             <td><a href="edit?id=<c:out value='${prospect.getRaison_sociale()}' />">Modifier</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;

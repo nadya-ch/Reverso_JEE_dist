@@ -1,10 +1,11 @@
 <%--
+&lt;%&ndash;
   Created by IntelliJ IDEA.
   User: CDA09
   Date: 11/04/2024
   Time: 13:33
   To change this template use File | Settings | File Templates.
---%>
+&ndash;%&gt;
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,19 +28,24 @@
 </header>
 
 <article>
-    <form action="loginServlet" method="post" class="form-cnx">
+    <form action="LoginServlet" method="post" class="form-cnx">
         <div class="form-example">
-            <label for="user">Utilisateur:</label>
-            <input type="text" name="utilisateur"  id="user" value="utilisateur" required />
+            <label for="email">email:</label>
+            <input type="email" name="username"  id="email" value="username" required />
         </div>
         <div class="form-example">
-            <label for="mdp">Mot de passe:</label>
-            <input type="password" name="mot-de-passe" id="mdp" required />
+            <label for="password">Mot de passe:</label>
+            <input type="password" name="password" id="password" required />
         </div>
         <div class="form-example">
             <input type="submit" value="Se connecter" />
         </div>
     </form>
+
+
+
+
+
 </article>
 
 <footer>
@@ -48,3 +54,4 @@
 
 </body>
 </html>
+--%>
